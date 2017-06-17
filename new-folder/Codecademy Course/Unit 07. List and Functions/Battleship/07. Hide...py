@@ -14,7 +14,7 @@ def random_row(board):
     return randint(0, len(board)-1)
 
 def random_col(board):
-    return randint(0, len(board)-1)
+    return randint(0, len(board[0])-1)
     
 print random_row(board)
 print random_col(board)
