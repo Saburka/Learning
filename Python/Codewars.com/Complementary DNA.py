@@ -12,7 +12,6 @@ DNA_strand ("ATTGC") # return "TAACG"
 DNA_strand ("GTAT") # return "CATA"
 """
 
-# My solution:
-import string
+# My solution (Python 3.6):
 def DNA_strand(dna):
-    return dna.translate(string.maketrans("ATCG","TAGC"))
+    return dna.translate(str.maketrans("ATCG","TAGC"))
