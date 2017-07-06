@@ -22,10 +22,7 @@ revrot("563000655734469485", 4) --> "0365065073456944"
 def revrot(strng, sz):
     if sz <= 0 or not strng or sz > len(strng):
         return ""
-    chunks = [strng[i:i+sz] for i in range(0, len(strng), sz)]
-    for chunk in chunks:
-        if len(chunk)!= sz:
-            chunks.remove(chunk)
+    chunks = [strng[i:i+sz] for i in range(0, len(strng) - (len(strng) % sz), sz)]
     a = []
     for chunk in chunks:
         if sum([int(i)**3 for i in chunk]) % 2 == 0:
