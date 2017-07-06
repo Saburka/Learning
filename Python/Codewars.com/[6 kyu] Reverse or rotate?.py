@@ -21,7 +21,7 @@ revrot("563000655734469485", 4) --> "0365065073456944"
 # My solution:
 def revrot(strng, sz):
     if sz <= 0 or not strng or sz > len(strng):
-        return "zly"
+        return ""
     chunks = [strng[i:i+sz] for i in range(0, len(strng), sz)]
     for chunk in chunks:
         if len(chunk)!= sz:
